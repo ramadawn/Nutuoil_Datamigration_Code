@@ -1,0 +1,447 @@
+externalid,name,upccode,displayname,vendorname,unitstype,stockunit,purchaseunit,saleunits,parent,description,subsidiary,includechildren,Department,Class,Location,tracklandedcost,costingmethod,costcategory,totalvalue,cost,purchasedescription,stockdescription,matchbilltoreceipt,usebins,atpmethod,supplyreplenishmentmethod,alternatedemandsourceitem,autopreferredstocklevel,reordermultiple,isspecialorderitem,autoreorderpoint,autoleadtime,leadtime,safetystocklevel,safetystockleveldays,seasonaldemand,demandmodifier,transferprice,manufacturer,mpn,countryofmanufacture,purchaseorderquantity,purchaseorderamount,purchaseorderquantitydiff,receiptquantity,receiptamount,receiptquantitydiff,preferredlocation,itembinnumber1,preferredperlocation,vendor1_name,vendor1_subsidiary,vendor1_preferred,vendor1_purchaseprice,vendor1_schedule,vendor1_code,itemLocationLine1_location,itemLocationLine1_atpleadtime,itemLocationLine1_backwardconsumptiondays,itemLocationLine1_defaultreturncost,itemLocationLine1_demandsource,itemLocationLine1_demandtimefence,itemLocationLine1_expirationdate,itemLocationLine1_forwardconsumptiondays,itemLocationLine1_periodsofsupplyincrement,itemLocationLine1_periodsofsupplytype,itemLocationLine1_preferredstocklevel,itemLocationLine1_reorderpoint,itemLocationLine1_rescheduleindays,itemLocationLine1_rescheduleoutdays,itemLocationLine1_lotnumbers,itemLocationLine1_lotsizingmethod,itemLocationLine1_planningtimefence,salesdescription,costestimatetype,costestimate,softdescriptor,minimumquantity,enforceminqtyinternally,weight,weightunit,quantitypricingschedule,usemarginalrates,overallquantitypricingtype,pricinggroup,salesprice,itemPriceLine1_itemPriceTypeRef,itemPriceLine1_currencyRef,itemPriceLine1_itemPrice,itemPriceLine1_quantityPricing,itemPriceLine2_itemPriceTypeRef,itemPriceLine2_currencyRef,itemPriceLine2_itemPrice,itemPriceLine2_quantityPricing,itemPriceLine3_itemPriceTypeRef,itemPriceLine3_currencyRef,itemPriceLine3_itemPrice,itemPriceLine3_quantityPricing,cogsaccount,incomeaccount,assetaccount,billpricevarianceacct,billqtyvarianceacct,billexchratevarianceacct,custreturnvarianceaccount,vendreturnvarianceaccount,unbuildvarianceaccount,istaxable,purchasetaxcode,availabletopartners,offersupport,isinactive,custitem_atlas_item_planner,custom:Name of the field(Label of the field)
+ExternalID,Item Name/Number,UPC Code,Display Name/Code,Vendor Name/Code,Units Type ,Stock Units ,Purchase Units,Sale Units,Subitem Of,Description,Subsidiary,Include Children,Department,Class,Location,Track Landed Cost,Costing Method ,Cost Category,Total Value,Purchase Price,Purchase Description,Stock Descrption,Match to Bill Receipt,Use Bins,Default ATP,Replenishment Method,Alternate Source Item,Auto-Calculate Preferred Stock Level,Reorder Multiple,Special Order Item,Auto-Calculate Reorder Point,Auto-Calculate Lead Time,Lead Time,Safety Stock Level,Safety Stock Level - Days,Seasonal Demand,Expected Demand Change,Transfer Price,Manufacturer,MPN,Country of Manufacture,Vendor Bill - Purchase Order Quantity Tolerance,Vendor Bill - Purchase Order Amount Tolerance,Vendor Bill - Purcahse Order Quantity Difference,Vendor Bill - Item Receipt Quantity Tolerance,Vendor Bill - Item Receipt Amount Tolerance,Vendor Bill - Item Receipt Quantity Difference,Preferred Location,Item Bin Number 1,Preferred (per Location),Vendor 1 Name,Vendor 1 Subsidiary,Vendor 1 Preferred,Vendor 1 Purchase Price,Vendor 1 Schedule,Vendor 1 Code,Item Location 1 Location,Location 1 ATP Lead Time,Location 1 Backward Consumption Days,Location 1 Default Return Cost,Location 1 Demand Source,Item Location 1 Demand Time Fence,Item Location 1 Expiration Date,Item Location 1 Forward Consumption Days,Item Location 1 Periods of Supply Increment,Item Location 1 Periods of Supply Type,Item Location 1 Preferred Stock Level,Item Location 1 Reorder Point,Item Location 1 Reschedule in Days,Item Location 1 Reschedule Out Days,Item Location 1 Lot Numbers,Item Location 1 Lot Sizing Method,Item Location 1 Planning Time Fence,Sales Description,Cost Estimate Type,Item Defined Cost,Soft Descriptor,Minimum Quantity,Enforce Internally,Item Weight,Weight Unit,Quantity Pricing Schedule,Use Marginal Rates,Calculate Quantity Discounts,Pricing Group,Base Price,Price Level (Req),Currency (Req),Price (Req),Quantity,Price Level (Req),Currency (Req),Price (Req),Quantity,Price Level (Req),Currency (Req),Price (Req),Quantity,COGS Account,Income Account ,Asset Account,Bill Price Variance Account,Bill Quantity Variance Account,Bill Exchange Variance Rate Variance Account,Customer Return Variance Account,Vendor Return Variance Account,Unbuild Variance Account,Taxable,Tax Schedule,Available to Adv. Partners,Offer Support,Inactive,Planner,Name of the field(Label of the field)
+"HEADER
+
+This is the Unique backend Identifier for  Inventory Item. Should be Unique for all the Item Records. This can be used to create a Parent-Child Relationship and to link other record sets with these Items.","HEADER
+
+Enter here item name/number of the item. This name appears in lists on transactions.","HEADER
+
+If Bar Coding and Item Labels is enabled, provide the  UPC code in this field that used for identifying an internal name or number to store item. You can use the text you entered when adding the item to transactions, searching, or viewing reports.
+
+This must be enabled in Setup > Company > Enable Features > > Items and Inventory tab > Bar Coding and Item Labels.","HEADER
+
+You can enter an optional name for an item in addition to the Item Name. The display name prints in the Item column of transaction forms. If you do not enter a display name, the item name appears on printed forms.","HEADER
+
+If your vendor uses a name for this item that is different from the name you use, you can enter up to 60 characters as the vendor's name for this item here.
+
+The vendor's name for this item prints in the Item column of purchase forms.
+
+If you do not enter a vendor name, the item name prints in the Item column of purchase forms. If you have entered a display name, it will print on purchases instead of the item name.","HEADER
+
+This is a reference to a Unit type that must exist in Lists > Accounting > Units of Measure prior to importing.
+
+Please note that once imported, Units Type cannot be updated","HEADER
+
+This is a reference to the Stock Unit type that must exist in your account prior to importing.","HEADER
+
+Select the unit you use to purchase this item from the vendor.","HEADER
+
+This is a reference to the Sale Unit type that must exist in your account prior to importing.","HEADER
+
+ParentRef field is used to create the Parent-Child Relationship for the Items.  You can either use Parent Item Number\Name or Parent Item ExternalID to create this relationship.
+
+Please make sure to populate the template such that the Parent Records are given in rows above the Child records.","HEADER
+Enter a description for this item. This description will appear in the Description column of sales forms.","HEADER
+
+This is a reference to the subsidiary which must be created in your account prior to import.  
+
+In case you want to refer a child subsidiary the complete hierarchy must be provided in the format: Parent Subsidiary Name : Child Subsidiary Name.
+
+The delimiter to be used for selecting multiple subsidiaries is a pipe ( | ), without spaces between the two subsidiary references.  This field becomes mandatory if you are using a NetSuite One-World account.","HEADER
+
+Put TRUE if the item has to be shared with the child subsidiaries","HEADER
+
+Provide the reference to the Department in this field.  In order to reference a sub department provide the complete hierarchy in the format Parent Department : Child department.
+
+This should be created in Setup > Company > Departments prior to import.","HEADER
+
+Provide the reference to the class in this field.  In order to reference a sub class provide the complete hierarchy in the format: Parent Class : Child Class.
+
+This should be created in Setup > Company > Classes prior to import. ","HEADER
+
+Provide the reference to the Location in this field. In order to reference a sub Location provide the complete hierarchy in the format Parent Location : Child Location.
+
+This should be created in Setup > Company > Locations prior to import. ","PURCHASING/INVENTORY
+
+Enter TRUE here to track landed costs associated with this item.
+
+NOTE: you must include an item that tracks landed costs on transactions you want to source for landed costs.
+
+For ex: on the landed costs subtab of item receipts, a vendor bill shows in the source transaction list only if the bill includes a landed cost item.","PURCHASING/INVENTORY
+
+Enter the Method of Costing which is used for this item (Average, FIFO or LIFO).
+
+Please note that once imported, Costing Method cannot be updated","PURCHASING/INVENTORY
+
+Select a category to associate with this item.
+
+View existing categories at Setup > Accounting > Accounting Lists","PURCHASING/INVENTORY
+
+Enter the total value of this lot. NetSuite generates this amount by multiplying your purchase price and your quantity on hand.
+
+As you buy and sell additional inventory, NetSuite continues to calculate the total value. ","PURCHASING/INVENTORY
+
+Enter the price you pay for this item.
+
+If you do not enter a price, purchase orders for this item show the most recent purchase price by default.
+
+If you select a preferred vendor for this item, the price is shown in the currency selected on the vendor's record. If no preferred vendor is selected, the price is shown in your base currency.","PURCHASING/INVENTORY
+
+Enter up to 999 characters of text for a description of this item to appear on vendor orders. Include the unit of measure in this description.","PURCHASING/INVENTORY
+
+Enter up to 21 characters to specify information about this item.","PURCHASING/INVENTORY
+
+Enter TRUE to if you want the Match Bill to Receipt box on transaction lines to be checked by default for this item. This enables you to generate variances based on vendor bill lines.  Then, on the Post Vendor Bill Variances page, you must select Bill in the Transaction Type field to generate the variance postings.","PURCHASING/INVENTORY
+
+Enter TRUE to track bin locations for this item.
+
+If you choose to use bins for this item, you must assocaite at least one bin with the item using the Bin Numbers subtab.
+
+You can associate multiple items with on bin and multiple bins with one item. You can also designate one preferred bin per location. The preferred bin is listed by default on receipt and fulfillment transactions. To create bin records that can be selected here, go to Lists> Supply Chain > Bins > New","PURCHASING/INVENTORY
+
+In the Default ATP Method field, select a method.
+Discrete ATP – The discrete ATP method reviews the amount available in each supply order and provides an available date for the given quantity.
+Cumulative ATP with Look Ahead – Using the Cumulative ATP with Look Ahead method, supply estimates are cumulative based on all outstanding orders within a horizon. This allows you to account for shortages that may occur in the future. 
+These supply calculations are based on future-dated non-posting transactions: purchase orders, sales orders and work orders.
+
+For more details and examples, click Help and read Available to Promise Methods.","PURCHASING/INVENTORY
+
+Choose a method to use for calculating item replenishment requirements:
+Reorder Point – Choose this setting to use Advanced Inventory Management settings for demand calculations instead of using Demand Planning. This is the default setting for new item records.
+Orders are created based on replenishment reminders generated from the Order Items page, Replenish Items, and Mass Create Work Orders.
+Time Phased – When you choose this setting, orders are created based on item demand plans instead of the Advanced Inventory Management settings.
+When you choose this setting, other fields on the record that are used by Advanced Inventory Management to calculate demand are no longer available. These unavailable fields are: Seasonal Demand, Build Point, Reorder Point, Preferred Stock Level, Safety Stock Days.
+The Auto calculate settings are cleared and cannot be changed for Demand Per Day, Reorder Point, Preferred Stock Level, Lead Time.","PURCHASING/INVENTORY
+
+For demand planning purposes, choose another item if you want to examine the historical sales of an item other than the one on the current record. When this field is left blank, the source for historical data is the original item.
+
+For example, if you are setting up Item A for demand planning, but Item A does not have an extensive sales history, you can choose Item B as an alternate source for historical data. Then, when demand calculations need to be made for Item A, NetSuite uses Item B’s history for the calculations.
+
+Note: You can select only an item that is of the same item type to be an alternate source. For example, if the original item is an inventory item, the alternate source item must also be an inventory item.","PURCHASING/INVENTORY
+
+The preferred stock level is the optimum quantity to maintain in stock of an item.
+ 
+The quantity you enter here is used to determine your replenishment needs on the Order Items page. It is the quantity you want to have in stock after an order is placed.
+
+Auto-Calculating – Check the Auto-Calculate box if you want NetSuite to calculate the preferred stock level based on demand for the item.
+The preferred stock level is calculated as:
+(daily demand * number of days supply preferred).
+
+If no preferred stock level is identified, then the default preferred stock level is used from the Set Up Inventory Management page.","PURCHASING/INVENTORY
+
+
+Enter the quantity you prefer to order of this item each time. Then, the Order Items page suggests ordering a quantity of this item that is always a multiple of the number you enter.
+ 
+For example, if the vendor only accepts orders in multiples of one thousand, you would enter 1000 in this field. Then, the Order items page might suggest that you order 1000 or 2000, but not 1500.
+
+Note: If you use the Multiple Units of Measure feature, the reorder multiple always functions in base units.","PURCHASING/INVENTORY
+
+Put TRUE to have this item default as a Special Order on sales orders. If an Item is to marked as a Special Order Item, then Vendor becomes mandatory.","PURCHASING/INVENTORY
+
+Enter the point at which to reorder or build more of this item.
+
+The Reorder Point is the quantity level at which you need to reorder or build more of this item.
+
+Auto-Calculating – Check the Auto-Calculate box if you want NetSuite to calculate the reorder point based on demand for the item over time. The reorder point depends on the safety stock definition and is calculated as follows:
+Without safety stock defined: 
+Reorder point = (average lead time days * demand)
+With safety stock defined in days: 
+Reorder point = [(average lead time days + safety stock days) * demand]
+With safety stock quantity defined: 
+Reorder point = [(average lead time days * demand) + safety stock quantity)
+Manually Calculating – Clear the Auto-Calculate box if you want to manually enter the point at which to reorder or build more of this item.
+If you go to Home > User Preferences and place a check mark in the Inventory Level Warnings box, NetSuite reminds you when you have reached the reorder point.","PURCHASING/INVENTORY
+
+Lead time is the average number of days between ordering this item from the vendor and receiving it. 
+Enter True here if you want NetSuite to calculate the lead time based on the most recent order history of this item. This is calculated by taking the number of days between the order entry and receipt on the three most recent purchase orders, and dividing by three.
+If there are multiple receipts for the item against the same purchase order, only the first receipt is used for the calculation.
+Lead time calculation is not weighted by number of units received.
+More recent purchase orders without receipts are ignored.","PURCHASING/INVENTORY
+
+Lead time is the average number of days between ordering this item from the vendor and receiving it. ","PURCHASING/INVENTORY
+
+Enter the amount of an item you prefer to keep in stock at all times. Safety stock can be a quantity or a number of days worth of stock. 
+ 
+This amount is used to auto-calculate the reorder point of an item.
+To define safety stock as a quantity, enter a value.
+","PURCHASING/INVENTORY
+
+To define safety stock as a number of days, enter a value in the field next to Days.
+If no safety stock value is entered, then the default value from the Set Up Inventory Management page is used.","PURCHASING/INVENTORY
+
+This setting defines the way NetSuite analyzes customer demand for this item. 
+ 
+Customer demand for an item is used to auto-calculate reorder points and preferred stock levels. An item’s demand rate is calculated as the average sales quantity per day.
+Historical Demand – Clear the Seasonal Demand box if you prefer to calculate the demand as average sales per day over a specific period. 
+To set the number of months interval between analysis to evaluate sales orders and calculate item demand, go to Setup > Accounting > Set Up Inventory Management > Order Analysis Interval field.
+Seasonal Demand – Check the Seasonal Demand box to calculate the reorder quantity for this item based on inventory demand changes through the year. 
+To set the number of months interval between analysis to evaluate sales orders and calculate item demand, go to Setup > Accounting > Set Up Inventory Management > Order Analysis Interval field.","PURCHASING/INVENTORY
+
+Enter the default percentage of expected demand change to use for calculating item demand. 
+ 
+For example, if you know that new customers will increase sales of this item in the future, you can enter a 10% expected demand change to be added on to previous sales totals.
+ 
+If no expected demand change percentage is entered, then the default value from the Set Up Inventory Management page is used.","PURCHASING/INVENTORY
+
+Enter a transfer price on an item record to set the default value used as the transfer price on transfer orders. You can still override this default by entering a new transfer price for an item on the transfer order.","PURCHASING/INVENTORY
+
+Enter the name of the company that manufactures this item.","PURCHASING/INVENTORY
+
+MPN (Manufacturers Part Number) - Enter the part number used by the manufacturer to identify this item.","PURCHASING/INVENTORY
+
+Enter the name of the country where this item is manufactured.
+
+This information is used for customs purposes when shipping.","PURCHASING/INVENTORY
+
+Enter the tolerance limit for the discrepancy between the quantity on the vendor bill and purchase order for this item.","PURCHASING/INVENTORY
+
+Enter the tolerance limit for the discrepancy between the amount on the vendor bill and purchase order for this item.","PURCHASING/INVENTORY
+
+Enter the difference limit for the discrepancy between the quantity on the vendor bill and purchase order for this item.","PURCHASING/INVENTORY
+
+Enter the tolerance limit for the discrepancy between the quantity on the vendor bill and item receipt for this item.","PURCHASING/INVENTORY
+
+Enter the tolerance limit for the discrepancy between the amount on the vendor bill and item receipt for this item.","PURCHASING/INVENTORY
+
+Enter the difference limit for the discrepancy between the quantity on the vendor bill and item receipt for this item.","PURCHASING/INVENTORY
+
+Enter the location you would like to associate with this item. This should be setup in Setup > Company > Locations prior to import.
+
+This location will autofill on sales orders that show locations on a line-item basis.","PURCHASING/INVENTORY
+
+Enter the bin number this item is stored in.
+
+NOTE: add additional columns for every bin number this item is located in.
+
+This field becomes mandatory when the 'Use Bin Numbers' field is marked TRUE.","PURCHASING/INVENTORY
+
+Enter TRUE if this bin number is preferred for the location selected.","PURCHASING/INVENTORY
+
+Enter the vendors you purchase this item from. If there are multiple vendors add additional columns here.","PURCHASING/INVENTORY
+
+Enter the subsidiary that this vendor is related to.","PURCHASING/INVENTORY
+
+Enter TRUE here if this is the preferred vendor for this item","PURCHASING/INVENTORY
+
+Enter the purchase price for this item associated to this vendor.","PURCHASING/INVENTORY
+
+Select a quantity pricing schedule associated to this vendor. NOTE: this schedule must already exist in the system","PURCHASING/INVENTORY
+
+Enter the vendor's code for this item.","PURCHASING/INVENTORY
+
+Enter the location where this item is stored. NOTE: If there is more than 1 inventory location associated to this item, add another set of the following columns (itemLocationLine2, etc.)","PURCHASING/INVENTORY
+
+Select the Available to Promise lead time for this item. If ATP Lead Time is null, NetSuite uses 90 days when you check item availability.","PURCHASING/INVENTORY
+
+Enter the number of days of backward consumption for this item to be used in demand planning.","PURCHASING/INVENTORY
+
+Enter the rate you want to default to show as the cost for this item when it is returned.","PURCHASING/INVENTORY
+
+This determines where demand data is sourced for an item. Possible values are:
+-Forecast from Demand Plan
+-Select Entered and Planned Orders ","PURCHASING/INVENTORY
+
+This determines where demand data is sourced for an item. Possible values are:
+-Forecast from Demand Plan
+-Select Entered and Planned Orders","PURCHASING/INVENTORY
+
+Enter the expiration date for the item.
+","PURCHASING/INVENTORY
+
+Enter the number of days of forward consumption for this item to be used in demand planning.","PURCHASING/INVENTORY
+
+Enter the periods of supply increment here.","PURCHASING/INVENTORY
+
+Enter the periods of supply type for this item. Options are: Interval, Monthly, Weekly.","PURCHASING/INVENTORY
+
+Enter the periods of supply increment here.BR3","PURCHASING/INVENTORY
+
+Enter the quantity at which you need to place an order to replenish stock or build more of this item.","PURCHASING/INVENTORY
+",PURCHASING/INVENTORY,"PURCHASING/INVENTORY
+
+You can import lot numbers for new lot numbered items if you are adding them to your account for the first time. Typically this is done through a separate process. ","PURCHASING/INVENTORY
+
+Possible values include:
+-Lot For Lot – Orders are suggested for procurement based on the exact projections for that day. The suggested order quantity may vary from day to day depending on demand calculations.
+-Fixed Lot Size – Orders are suggested for procurement based on a fixed amount or a multiple of the fixed amount.
+-Periods of Supply – Select this option to generate aggregated purchase orders or work orders based on the overall demand requirements extended over a designated period, such as weekly or monthly.","PURCHASING/INVENTORY
+
+Enter a number between 0 and 365 to determine the planning time fence for this item.","SALES/PRICING
+
+Enter a sales description for this item.
+You can enter letters and numbers. There is a 999 character limit.
+
+The sales description displays on transactions such as sales orders, cash sales and invoices.
+
+If you use the Web Store feature, the sales description displays immediately under the item's store display name on item list pages in your store or site, if you have not entered a store description for an item. Enter the store description on the Store subtab of the item record.
+
+The sales description also displays by default when the item is in the Web store shopping cart.","SALES/PRICING
+
+The Cost Estimate Type determines what value NetSuite uses to calculate estimated Gross Profit. 
+
+The estimated Gross Profit for Items on a transaction provides the data needed to calculate the total estimated Gross Profit on that transaction. 
+
+The individual line items that you enter in a transaction determine the amounts that post in NetSuite when you process that transaction.
+ 
+The following Cost Estimate Types on Items are available: 
+Item Defined Cost - a user-defined amount, entered into the Item Defined Cost field on the Item definition page.
+Average Cost - NetSuite calculates an average cost of the units purchased. With Multi-Location Inventory enabled, NetSuite calculates the average across all locations. Otherwise, the average calculation uses location-specific costs.
+Last Purchase Price - This field displays the most recent purchase price of the item as determined by purchase order receipt transactions. If you make multiple purchases on the same day that use different rates, this field shows the highest purchase price on that day, per location if applicable. When you use the Multiple-Location Inventory feature, the last purchase price reflects the most recent receipt at any location. If you track Cost of Goods Sold (COGS), NetSuite identifies the cost of the item based on your COGS settings.
+Purchase Price - Enter the price that you pay for this item. If you do not enter a price, then the most recent purchase price from purchase orders provides the price for this item by default.
+Preferred Vendor Rate - This option is only meaningful if the Multi-Vendor feature is enabled and multiple vendors supply the same item. In order of precedence:
+Preferred vendor rate, if defined on the Item record 
+Purchase price
+Purchase Order Rate - Initially uses the Preferred Vendor Rate cost, and then after a purchase order is entered, this type uses the most recent actual purchase order rate. Special orders and drop-shipped items use this cost information.
+Derived from Member Items - Total costs of items currently included in a kit. This Cost Estimate Type only applies to kits and sums the estimated costs of each item in the kit, based on each of their individual Cost Estimate Types. Uses the latest definition of the kit, not its historical definition. ","SALES/PRICING
+
+A user-defined amount, entered into the Item Defined Cost field on the Item definition page.
+","SALES/PRICING
+
+Select the brand name or name that should appear on customers' credit card statements when this item is purchased.
+
+Enter soft descriptors to select in this field at: Setup > Accounting > Credit Card Soft Descriptors","SALES/PRICING
+
+Enter the smallest quantity you allow customers to purchase for this item.
+
+When customers add this item to their carts in the Web store, the quantity for this item is defaulted to the minimum number of items.
+
+Web store customers receive a warning and cannot check out if they enter an item quantity below this minimum. If you use Advanced Site Customization, you can edit this warning at Setup > Web Site > Customize Web Site Text.
+
+Leave this field empty to allow customers to check out with no minimum quantity restrictions.","SALES/PRICING
+
+Check this box to only allow sales orders created in NetSuite to be submitted when the minimum quantity of this item is ordered.
+
+When the item is selected on a sales order, the quantity is set to the minimum by default. If the quantity is edited below the minimum amount, an alert pops up, and the item cannot be added to the order.
+
+When you clear this box but enter a number in the Minimum Quantity field, the minimum only applies in the Web store.","SALES/PRICING
+
+Enter the Weight of this item.","SALES/PRICING
+
+This is a reference to units of weight that already exist in your account. The valid entries for this element are g, kg, lb or oz.
+This field becomes mandatory if you provide a weight for an item.","SALES/PRICING
+
+Enter the the pricing schedule you want to use to set prices for this item.  Selecting a pricing schedule sets the Use Marginal Rates and Calculate Quantity Discounts fields.
+
+This must be setup in Lists > Accounting > Quantity Pricing Schedules prior to importing. ","SALES/PRICING
+
+Enter TRUE if you want the quantity discounts in the schedule to be applied to each pricing bracket separately. ","SALES/PRICING
+
+Choose how to determine the quantity for the purpose of pricing: 
+
+- By Line Qty
+- By Overall Item Qty
+- By Overall Parent Qty
+- By Overall Schedule Qty","SALES/PRICING
+
+Enter the pricing group this item is a member of. 
+
+Using pricing groups allows you to assign customer-specific price levels for a group of items. 
+
+This must be setup in Setup > Accounting > Accounting Lists > New > Pricing Group prior to import.","SALES/PRICING
+
+Use this field to enter the Sales Price of an Item if you do not use Multiple Price Levels. Use the following columns (BF till BQ), if you use multiple price levels.","SALES/PRICING
+
+Enter the Name of the Price Level which this item is to be sold.
+
+This must be setup in Setup > Company > Accounting Lists > Price Level prior to import.","SALES/PRICING
+
+Enter the Currency at which this item is to be sold at. 
+
+The currency should match and exist in Lists > Accounting > Currencies prior to import.","SALES/PRICING
+
+Enter the relevant price for this item at this Price Level","SALES/PRICING
+
+Enter the number of items required for this item at this Price Level","SALES/PRICING
+
+Enter the Name of the Price Level which this item is to be sold.
+
+This must be setup in Setup > Company > Accounting Lists > Price Level prior to import.","SALES/PRICING
+
+Enter the Currency at which this item is to be sold at. 
+
+The currency should match and exist in Lists > Accounting > Currencies prior to import.","SALES/PRICING
+
+Enter the relevant price for this item at this Price Level","SALES/PRICING
+
+Enter the number of items required for this item at this Price Level ","SALES/PRICING
+
+Enter the Name of the Price Level which this item is to be sold.
+
+This must be setup in Setup > Company > Accounting Lists > Price Level prior to import.","SALES/PRICING
+
+Enter the Currency at which this item is to be sold at. 
+
+The currency should match and exist in Lists > Accounting > Currencies prior to import.","SALES/PRICING
+
+Enter the relevant price for this item at this Price Level","SALES/PRICING
+
+Enter the relevant price for this item at for this price level. If you have more than 3 price levels, please use the multi-file option to import the price level values. The Price level file should have the following 4 columns:
+ItemID/ExternalID 
+itemPriceLine_itemPriceTypeRef
+itemPriceLine_currencyRef 
+itemPriceLine_itemPrice
+itemPriceLine_quantityPricing","ACCOUNTING
+
+Select the COGS Account which tracks the Cost of Goods sold on this item.
+
+The complete hierarchy of the accounts should be provided if you want to refer to a child account. The expected format is: Child Account Number and Parent Name : Child Account Name.
+
+The COGS account must exist in Lists > Accounting > Account prior to importing.","ACCOUNTING
+
+Select the income account that will be affected by the sale of this item.  
+
+The complete hierarchy of the accounts should be provided if you want to refer to a child account. The expected format is:  Child Account Number and Parent Name : Child Account Name
+
+The Income account must exist in Lists > Accounting > Account prior to importing. 
+","ACCOUNTING
+
+Select the asset account that tracks the value of the inventory on hand for this item.  The complete hierarchy of the accounts should be provided if you want to refer to a child account.  The expected format is: Child Account Number and Parent Name : Child Account Name
+
+The asset account must exist in Lists > Accounting > Account prior to importing. ","ACCOUNTING
+
+Enter the account to post to for variances in billing prices associated with this item. These variances occur when there is a difference in the price of an item showing on the purchase order and the price of an item showing on the bill.
+
+This account must exist in Lists > Accounting > Account prior to importing. ","ACCOUNTING
+
+Enter the account to post to for variances in billing quantities associated with this item. These variances occur when there is a difference in the quantity of an item showing on the receipt and the quantity of an item showing on the bill.
+
+This account must exist in Lists > Accounting > Account prior to importing. ","ACCOUNTING
+
+Select the account to post to for variances in exchange rates associated with this item. These variances occur when there are exchange rate differences between the receipt and the bill for an item.
+
+This account must exist in Lists > Accounting > Account prior to importing. ","ACCOUNTING
+
+In this field, choose the account you want to post variance amounts to for cost variances of items returned by customers.
+You can set a specific Cost of Goods Sold (COGS) account to use for returns of this item. This enables you to track COGS separately for returns and sales.
+
+For example, a return authorization (RMA) may have a value of $5 for the item. But once the RMA is received, the costing value received is now $4. This generates a difference of $1. 
+
+If you select a Customer Return Variance Account, the $1 posts to the account you choose in this field.
+If you do not select a Customer Return Variance Account, the $1 posts to the account chosen in the COGS Account field. Note: This is the same field that sales COGS amounts post to.","ACCOUNTING
+
+
+In this field, choose the account you want to post variance amounts to for cost variances of items returned to vendors.
+You can set a specific Cost of Goods Sold (COGS) account to use for returns of this item. This enables you to track COGS separately for returns and purchases .
+
+
+If you do not select a Vendor Return Variance Account, any variances post to the account chosen in the COGS Account field.","ACCOUNTING
+
+
+Select an account for posting variance amounts that result from unbuilding the assembly.
+
+If no account is selected in this field, variance amounts for this item post to the Cost of Goods Sold (COGS) account. This field defaults to be blank.
+
+When you unbuild an assembly item, sometimes there is a difference in the cost of the item at the time of assembly and the cost at the time of the unbuild. Any variance amount between the assembly cost and the unbuild cost posts to the account selected in this field.","ACCOUNTING
+
+Check this box if the item is subject to sales tax.","ACCOUNTING
+
+Required field if you activate the Advance Taxes. You can create Tax schedules at Set up> Accounting> Taxes> Tax Schedules> New. ","PREFERENCES
+
+Enter TRUE to make this item available to partners with the Advanced Partner Center role for viewing.
+
+These items are also available to partners with roles that are customized for the Advanced Partner Center and include view, create or edit access to item records.","PREFERENCES
+
+Enter TRUE to offer support for this particular item.
+
+By offering support for items, customers can select on case records which item they are having trouble with.","SYSTEM INFO
+
+When you enter TRUE, this item will no longer appear on a list unless you check the Show All box at the bottom of the list page.","HEADER
+
+This field is used to import the Value for the Planner code associated with the item.  This field can be used to segregate Items to make filtering easier",
+Alpha Numeric,Alpha Numeric,Alpha Numeric,Alpha Numeric,List,List,List,,List,List,Alpha Numeric,LIST,Boolean,List,List,List,Boolean,List,List,Decimal,,,String,Boolean,Boolean,List,List,List,Boolean,Number,Boolean,Numbers,Boolean,Numbers,Number,Number,Boolean,Percentage,Decimal,String,String,List,Decimal,Decimal,Decimal,Decimal,Decimal,Decimal,List,,Boolean,List,List,Boolean,Decimal,List,String,List,Number,Number,Decimal,List,Number,,Number,Number,List,Number,Number,,,,List,Number,,List,Decimal,List,,,Numbers,List,List,Boolean,List,List,Numbers,List,List,,,List,List,,,List,List,,,List,List,List,List,List,List,List,List,List,Boolean,List,Boolean,Boolean,Boolean ,List,
+String Max 60 Characters,Max 60 chars,Max 180 characters,Max 60 chars,List,List,List,,List,List,Max 999 chars,LIST,TRUE/FALSE,List,List,List,TRUE/FALSE,List,List,,,,Max 21 Characters,TRUE/FALSE,TRUE/FALSE,List,List,List,TRUE/FALSE,,TRUE/FALSE,,TRUE/FALSE,,,,TRUE/FALSE,,,Max 200 Characters,Max 100 Characters,List,Decimal,Decimal,Decimal,Decimal,Decimal,Decimal,List,,TRUE/FALSE,List,List,TRUE/FALSE,,List,,List,,,,List,,,,,List,,,,,,List,,,List,,List,,,,List,List,TRUE/FALSE,List,List,,List,List,,,List,List,,,List,List,,,List,List,List,List,List,List,List,List,List,TRUE/FALSE,List,TRUE/FALSE,TRUE/FALSE,TRUE/FALSE,List,
+Computer Desktop,Computer Desktop,,Computer Desktop,,,,,,,,Consolodated Parent Subsidiary : Child US Subsidiary,,,,,,LIFO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,5000 Cost of Goods Sold,4000 Sales,1200 Inventory Asset,,,,,,,,,,,,,
+HP Compaq D230,HP Compaq D230,,HP Compaq D230,,,,,,Computer Desktop,,Consolodated Parent Subsidiary : Child US Subsidiary|Consolodated Parent Subsidiary : Child Canadian Subsidiaries,TRUE,,,,,LIFO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,5001 Cost of Goods Sold : Cost of Sales,4001 Sales : Sales - Merchandise,1201 Inventory Asset : Machinery & Equipments,,,,,,,,,,,,,
+All Fields marked in RED are mandatory,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+itemPriceLine List,This is used only if you use Multiple Price Levels,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+itemLocation List,This is used only if you have multiple locations,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

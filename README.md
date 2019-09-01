@@ -11,3 +11,5 @@ Version Two: use pandas library to create a data frame object that can reference
 Version 3 implements a "data control dictionary" which allows mapping to be controlled on the fly using dictionary entries rather that using specifically encoded logic.
 
 Also included is a web based GUI manual mapping interface to allow fro quick mapping of data. 
+
+Program starts wit the template filler script.
